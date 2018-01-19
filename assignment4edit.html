@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>A00987471 - Assignment 4 </title>
+  
+    <style>
+        
+        #back img{
+      Width: 30px;
+            height: 30px;
+            background-color: white;
+           position: absolute;
+            top:60px;
+             margin: 10px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 15px #363333;
+        }
+        
+        #next img{
+            
+               Width: 30px;
+            height: 30px;
+            background-color: white;
+          position: absolute;
+             margin: 10px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.5);
+    box-shadow: 0px 0px 15px #363333;
+        }
+        
+        #gallery{
+             width: 453px;
+            height:508px;
+            background-color: antiquewhite;
+           position: absolute;
+            border-radius:5%;
+             background-color: rgba(214, 224, 226, 0.2);
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px #363333;
+        }
+  </style>
+    
+    </head>
+    
+  <body>
+<img src="Product.jpg" id='gallery'>
+<div id="back"><img src="downarrow.png"></div>  
+      <div id="next"><img src="uparrow.png"></div>
+
+      <script>
+          
+          var image = new Array(3)
+image[1]="product.jpg"
+image[2]="product2.jpg"
+image[3]="product3.jpg"
+var num = 1;
+
+document.getElementById('next').addEventListener('click', function(galleryNext){
+num=num+1
+if (num==4)
+{num=1}
+document.getElementById('gallery').src=image[num];
+});
+
+document.getElementById('back').addEventListener('click', function(galleryPrevious){
+num=num-1
+if (num==0)
+{num=3}
+document.getElementById('gallery').src=image[num];
+});
+        </script>
+        
+        
+        
+    </body>
+    
+</html>
